@@ -12,7 +12,7 @@ class CompoaseViewController: ViewController {
     
       override func viewDidLoad() {
            super.viewDidLoad()
-
+           self.modalPresentationStyle = .fullScreen
        }
     
     @IBAction func addPost(_ sender: Any) {

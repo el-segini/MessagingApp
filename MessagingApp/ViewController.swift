@@ -17,9 +17,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView?.dataSource = self
+        tableView?.delegate = self
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -27,12 +26,22 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "xx")
-        cell?.textLabel!.text = postData[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "xx")
+        else {
+            print("cell error")
+            return UITableViewCell()
+        }
+        cell.textLabel?.text = postData[indexPath.row]
         
-        return cell!
+        return cell
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let composeVC = segue.destination as! CompoaseViewController
+        composeVC.modalPresentationStyle = .fullScreen
+        
+    }
+
 
 }
 

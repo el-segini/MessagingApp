@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ofj-Na-SZl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ofj-Na-SZl">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" id="ObF-hL-9mM">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="9O4-0p-NuJ">
                             <connections>
-                                <segue destination="iir-Kw-KkA" kind="presentation" id="FZg-g3-qk6"/>
+                                <segue destination="iir-Kw-KkA" kind="presentation" identifier="compose" id="hI3-2J-EkJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,6 +102,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0AR-10-Wbj"/>
                     </view>
+                    <navigationItem key="navigationItem" id="96v-wc-LEs"/>
                     <connections>
                         <outlet property="textView" destination="arT-Ds-LMk" id="0Vh-7K-LVr"/>
                     </connections>
